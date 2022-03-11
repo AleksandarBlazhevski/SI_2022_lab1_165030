@@ -1,1 +1,2 @@
-# SI_2022_lab1_165030
+Aleksandar Blazhevski
+165030
