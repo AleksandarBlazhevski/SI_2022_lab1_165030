@@ -1,0 +1,161 @@
+$ git clone https://github.com/AleksandarBlazhevski/SI_2022_lab1_165030.git
+- So clone go kloniram remote repo-to koe se naogja na https://github.com/AleksandarBlazhevski/SI_2022_lab1_165030.git
+
+$ git add shopping_list.txt
+- So add tekstualniot dokument shopping_list.txt se stava na stage i e podgotven za commit
+
+$ git commit -m "Add 5 items to the shopping list"
+- So commit pravime commit na lokalnoto repo so poraka "Add 5 items to the shopping list"
+
+$ git add shopping_list.txt
+- So add tekstualniot modificiran dokument shopping_list.txt se stava na stage i e podgotven za commit
+
+$ git commit -m "Add quantities to the items."
+- So commit pravime commit na lokalnoto repo so poraka "Add quantities to the items."
+
+$ git branch branch1
+- So branch pravime nova granka so ime branch1
+
+$ git branch branch2
+- So branch pravime nova granka so ime branch2
+
+$ git log
+- So log gi dobivame slednite logovi
+commit 6762e1173b4e7a8c49840cd799b3ebe1f86b4809 (HEAD -> master, branch2, branch1)
+Author: Aleksandar Blazhevski <aleksandar.blazhevski@students.finki.ukim.mk>
+Date:   Fri Mar 11 14:39:29 2022 +0100
+
+    Add quantities to the items.
+
+commit d0db6d843ffda3f88ea634f12f64cf94356cafa1
+Author: Aleksandar Blazhevski <aleksandar.blazhevski@students.finki.ukim.mk>
+Date:   Fri Mar 11 14:38:05 2022 +0100
+
+    Add 5 items to the shopping list
+
+commit 2ac86e2d315ae1823c0a8e3c3526e97e62387ce4 (origin/master, origin/HEAD)
+Author: AleksandarBlazhevski <63475873+AleksandarBlazhevski@users.noreply.github.com>
+Date:   Fri Mar 11 14:02:06 2022 +0100
+
+    Update README.md
+
+commit 676c51773362fde1467e24cf7692f9cbeeb8d27d
+Author: AleksandarBlazhevski <63475873+AleksandarBlazhevski@users.noreply.github.com>
+Date:   Fri Mar 11 14:00:03 2022 +0100
+
+    Initial commit
+
+$ git push -u origin master
+- So push go preslikuvame lokanoto repo vo remote repo-to so ime origin i na grankata master
+
+$ git push -u origin branch1
+- So push go preslikuvame lokanoto repo vo remote repo-to so ime origin i na grankata branch1
+
+$ git push -u origin branch2
+- So push go preslikuvame lokanoto repo vo remote repo-to so ime origin i na grankata branch2
+
+$ git checkout branch1
+- So checkout se prefrlame na grankata branch1
+
+$ git add shopping_list.txt
+-So add go dodavame na stage shopping_list.txt
+
+$ git commit -m "Change quantity of item #5"
+-So commit pravime commit na grankata branch1 so poraka Change quantity of item #5
+
+$ git checkout master
+- So checkout se prefrlame na grankata master
+
+$ git add shopping_list.txt
+-So add go dodavame na stage shopping_list.txt
+
+$ git commit -m "Change quantity of item #2"
+-So commit pravime commit na grankata branch1 so poraka Change quantity of item #2
+
+$ git push -u origin master
+- So push pravime sinhronizacija na remote repoto so lokalnoto na master grankata
+
+$ git push -u origin branch1
+- So push pravime sinhronizacija na remote repoto so lokalnoto na branch1 grankata
+
+//14
+
+$ git checkout branch2
+- So checkout se prefrlame na branch2
+
+$ git add shopping_list.txt
+- So add dodavame shopping_list.txt na stage
+
+$ git commit -m "Modify item #4"
+- So commit pravime commit na branch2 so poraka Modify item #4
+
+$ git log
+-----------------
+commit f8dbff189ebac7b1aa55d3f5ac50b7ea0a78c849 (HEAD -> branch2)
+Author: Aleksandar Blazhevski <aleksandar.blazhevski@students.finki.ukim.mk>
+Date:   Mon Mar 21 16:54:20 2022 +0100
+
+    Modify item #4
+
+commit 6762e1173b4e7a8c49840cd799b3ebe1f86b4809 (origin/branch2)
+Author: Aleksandar Blazhevski <aleksandar.blazhevski@students.finki.ukim.mk>
+Date:   Fri Mar 11 14:39:29 2022 +0100
+
+    Add quantities to the items.
+
+commit d0db6d843ffda3f88ea634f12f64cf94356cafa1
+Author: Aleksandar Blazhevski <aleksandar.blazhevski@students.finki.ukim.mk>
+Date:   Fri Mar 11 14:38:05 2022 +0100
+
+    Add 5 items to the shopping list
+
+commit 2ac86e2d315ae1823c0a8e3c3526e97e62387ce4
+Author: AleksandarBlazhevski <63475873+AleksandarBlazhevski@users.noreply.github.com>
+Date:   Fri Mar 11 14:02:06 2022 +0100
+
+$ git add shopping_list.txt
+
+$ git commit --amend -m "Modify item #4 and add item #6"
+- So commit --amend go modificirame posledniot commit so poraka Modify item #4 and add item #6
+
+$ git log
+------------
+commit c69283946738c9ac056fc3f287a72e0d22ffbf69 (HEAD -> branch2)
+Author: Aleksandar Blazhevski <aleksandar.blazhevski@students.finki.ukim.mk>
+Date:   Mon Mar 21 16:54:20 2022 +0100
+
+    Modify item #4 and add item #6
+
+commit 6762e1173b4e7a8c49840cd799b3ebe1f86b4809 (origin/branch2)
+Author: Aleksandar Blazhevski <aleksandar.blazhevski@students.finki.ukim.mk>
+Date:   Fri Mar 11 14:39:29 2022 +0100
+
+    Add quantities to the items.
+
+commit d0db6d843ffda3f88ea634f12f64cf94356cafa1
+Author: Aleksandar Blazhevski <aleksandar.blazhevski@students.finki.ukim.mk>
+Date:   Fri Mar 11 14:38:05 2022 +0100
+
+    Add 5 items to the shopping list
+
+commit 2ac86e2d315ae1823c0a8e3c3526e97e62387ce4
+Author: AleksandarBlazhevski <63475873+AleksandarBlazhevski@users.noreply.github.com>
+Date:   Fri Mar 11 14:02:06 2022 +0100
+
+$ git checkout master
+- So checkout se prefrlame na master
+
+$ git merge branch1
+- So merge ja spojuvame branch1 vo master
+
+$git merge branch2
+- So merge ne mozeme da ja spoime grankata branch2 vo master poradi konflikt
+- Go popravam konfliktot so brishenje na razlikite pomegju master i branch2 shopping_list.txt 
+
+$git add shopping_list.txt
+- So add go stavam popraveniot file 
+
+$git commit 
+- Go zavrshuvame spojuvanjeto
+
+
